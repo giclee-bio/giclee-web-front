@@ -7,6 +7,7 @@ module.exports = {
       current: 'currentColor',
       primary: '#4AB580', //giclee-400
       main: '#303633', //stone-900
+      white: '#D7D9D8', //stone-100
       giclee: {
         50: '#E5F4EC',
         100: '#C0E4D0',
