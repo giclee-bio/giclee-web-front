@@ -6,14 +6,24 @@
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:jsx-a11y/recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:tailwindcss/recommended"
   ],
-  "plugins": ["import", "sort-keys-fix", "typescript-sort-keys", "unused-imports"],
+  "plugins": ["import", "sort-keys-fix", "typescript-sort-keys", "unused-imports", "tailwindcss"],
   "rules": {
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc"
