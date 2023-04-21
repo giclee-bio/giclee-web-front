@@ -1,14 +1,14 @@
 import '@/styles/tailwind.css'
 
 export const metadata = {
-  title: 'giclee.bio',
   description: 'Game platform ID in bio.',
+  title: 'giclee.bio',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='ja'>
-      <body className='bg-main text-white'>{children}</body>
+      <body className='bg-base text-white'>{children}</body>
     </html>
   )
 }
