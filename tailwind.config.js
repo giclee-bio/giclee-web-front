@@ -1,13 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       primary: '#4AB580', //giclee-400
-      main: '#303633', //stone-900
+      base: '#303633', //stone-900
       white: '#D7D9D8', //stone-100
+      discord: '#5865F2',
+
       giclee: {
         50: '#E5F4EC',
         100: '#C0E4D0',
