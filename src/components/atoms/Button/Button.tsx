@@ -21,10 +21,10 @@ const Button: React.FC<Props> = ({ children, href, isLink, onClick, type, width 
       classes = classNames(classes, 'bg-primary', 'text-base')
       break
     case 'discord':
-      classes = classNames(classes, 'bg-discord', 'text-white')
+      classes = classNames(classes, 'bg-discord')
       break
     default:
-      classes = classNames(classes, 'bg-stone-800', 'text-white')
+      classes = classNames(classes, 'bg-stone-800')
   }
 
   return isLink ? (
