@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 
 import Button from './Button'
 
-describe('MinneAccordion', () => {
+describe('Button', () => {
   it('snapshot link', async () => {
     const { asFragment } = render(
       <Button href='/hoge' isLink={true}>
