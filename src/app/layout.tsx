@@ -1,5 +1,5 @@
 import '@/styles/tailwind.css'
-import Contents from '@/components/organisms/Contents'
+
 import Header from '@/components/organisms/Header'
 
 export const metadata = {
@@ -12,9 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='ja'>
       <body className='bg-base text-white'>
         <Header />
-        <main>
-          <Contents>{children}</Contents>
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   )
