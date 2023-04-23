@@ -3,7 +3,7 @@ import Top from '@/components/pages/Top'
 
 export default function Home() {
   return (
-    <Contents wide={true}>
+    <Contents center={true} wide={true}>
       <Top />
     </Contents>
   )
