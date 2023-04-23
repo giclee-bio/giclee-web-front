@@ -88,6 +88,11 @@ module.exports = {
         900: '#303633',
       },
     },
+    extend: {
+      width: {
+        '90vw': '90vw',
+      },
+    },
   },
   plugins: [],
 }
