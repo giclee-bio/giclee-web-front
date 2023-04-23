@@ -19,14 +19,7 @@ const dialogProps: DialogProps = {
 const LoginModal = () => {
   return (
     <Modal buttonProps={TriggerButtonProps} dialogProps={dialogProps}>
-      <Button
-        onClick={() => {
-          console.log('aaa')
-        }}
-        type='discord'
-      >
-        Discordでログイン
-      </Button>
+      <Button type='discord'>Discordでログイン</Button>
       <p className='mt-4 w-64 text-xs'>
         <a className='underline' href='/'>
           利用規約
