@@ -13,7 +13,7 @@ const TriggerButtonProps: ButtonProps = {
 
 const dialogProps: DialogProps = {
   description: '現在は、Discordアカウントとの連携でのみログインが可能です。',
-  title: 'gicleeへようこそ。',
+  title: 'giclee.bioへようこそ。',
 }
 
 const LoginModal = () => {
