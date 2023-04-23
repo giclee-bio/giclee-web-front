@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Button from '@/components/atoms/Button'
+import LoginModal from '../LoginModal'
 
 const Header = () => {
   return (
@@ -10,9 +10,7 @@ const Header = () => {
         <Link className='mt-4' href='/'>
           <Image alt='giclee.io' height={57} src='/giclee.png' width={101} />
         </Link>
-        <Button href='' isLink={true} type='light' width='half'>
-          ログイン
-        </Button>
+        <LoginModal />
       </div>
     </header>
   )
