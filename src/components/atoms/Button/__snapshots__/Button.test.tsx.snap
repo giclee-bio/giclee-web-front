@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MinneAccordion snapshot button 1`] = `
+exports[`Button snapshot button 1`] = `
 <DocumentFragment>
   <button
     class="h-10 rounded text-center font-bold leading-10 w-64 bg-stone-800"
@@ -10,7 +10,7 @@ exports[`MinneAccordion snapshot button 1`] = `
 </DocumentFragment>
 `;
 
-exports[`MinneAccordion snapshot link 1`] = `
+exports[`Button snapshot link 1`] = `
 <DocumentFragment>
   <a
     class="inline-block h-10 rounded text-center font-bold leading-10 w-64 bg-stone-800"
