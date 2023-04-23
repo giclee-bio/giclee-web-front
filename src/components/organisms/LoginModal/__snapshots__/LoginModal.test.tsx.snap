@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginModal snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="h-10 rounded text-center font-bold leading-10 w-32 bg-white text-base"
+  >
+    ログイン
+  </button>
+</DocumentFragment>
+`;
