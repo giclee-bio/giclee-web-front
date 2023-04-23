@@ -7,6 +7,11 @@ import type { DialogProps } from '@/components/molecules/Modal'
 
 const TriggerButtonProps: ButtonProps = {
   children: 'ログイン',
+  type: 'primary',
+}
+
+const TriggerDefaultButtonProps: ButtonProps = {
+  ...TriggerButtonProps,
   type: 'light',
   width: 'half',
 }
@@ -16,9 +21,16 @@ const dialogProps: DialogProps = {
   title: 'giclee.bioへようこそ。',
 }
 
-const LoginModal = () => {
+type Props = {
+  hero?: boolean
+}
+
+const LoginModal: React.FC<Props> = ({ hero }) => {
   return (
-    <Modal buttonProps={TriggerButtonProps} dialogProps={dialogProps}>
+    <Modal
+      buttonProps={hero ? TriggerButtonProps : TriggerDefaultButtonProps}
+      dialogProps={dialogProps}
+    >
       <Button type='discord'>Discordでログイン</Button>
       <p className='mt-4 w-64 text-xs'>
         <a className='underline' href='/'>

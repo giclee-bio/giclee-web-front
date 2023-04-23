@@ -10,4 +10,8 @@ const meta: Meta<typeof LoginModal> = {
 export default meta
 type Story = StoryObj<typeof LoginModal>
 
-export const Index: Story = {}
+export const Index: Story = {
+  args: {
+    hero: false,
+  },
+}
