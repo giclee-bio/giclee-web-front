@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import LoginModal from '../LoginModal'
+import LoginModal from '@/components/organisms/LoginModal'
 
 const Header = () => {
   return (
