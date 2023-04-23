@@ -7,7 +7,7 @@ export type Props = {
   onClick?: () => void
   type?: 'light' | 'primary' | 'discord' | 'default'
   width?: 'half' | 'default'
-} & ({ href: string; isLink: true } | { isLink?: false; onClick: () => void })
+} & ({ href: string; isLink: true } | { isLink?: false })
 
 const Button: React.FC<Props> = ({ children, href, isLink, onClick, type, width }) => {
   let classes = classNames('h-10', 'rounded', 'text-center', 'font-bold', 'leading-10')
