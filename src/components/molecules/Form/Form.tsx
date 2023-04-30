@@ -56,7 +56,7 @@ const FormItem: React.FC<FormField> = ({
             return <FormMessage {...validation} key={key} />
           })}
       </div>
-      <RadixForm.Control asChild className='mt-2'>
+      <RadixForm.Control asChild className='mt-2 bg-white'>
         {tag === 'input' ? (
           <input className='h-8 w-full rounded px-3 text-base' required={require} type={type} />
         ) : (
