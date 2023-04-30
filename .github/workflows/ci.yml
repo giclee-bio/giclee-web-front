@@ -7,7 +7,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: pnpm setup
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2
       - name: install packages
         run: pnpm install
       - name: run test
