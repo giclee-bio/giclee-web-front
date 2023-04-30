@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="w-64"
+  >
+    <div>
+      <div
+        class="flex justify-between text-sm"
+      >
+        <label
+          class="font-bold"
+          for="radix-:r0:"
+        >
+          ユーザー名
+        </label>
+      </div>
+      <input
+        class="mt-2 bg-white h-8 w-full rounded px-3 text-base"
+        id="radix-:r0:"
+        name="username"
+        required=""
+        title=""
+        type="text"
+      />
+    </div>
+    <button
+      class="mx-auto mt-9 block h-10 rounded text-center font-bold leading-10 w-64 bg-primary text-base"
+    >
+      登録する
+    </button>
+  </form>
+</DocumentFragment>
+`;
