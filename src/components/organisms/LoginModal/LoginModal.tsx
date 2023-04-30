@@ -31,7 +31,10 @@ const LoginModal: React.FC<Props> = ({ hero }) => {
       buttonProps={hero ? TriggerButtonProps : TriggerDefaultButtonProps}
       dialogProps={dialogProps}
     >
-      <Button type='discord'>Discordでログイン</Button>
+      {/* ToDo NextAuthに置き換え */}
+      <Button href='/register' isLink={true} type='discord'>
+        Discordでログイン
+      </Button>
       <p className='mt-4 w-64 text-xs'>
         <a className='underline' href='/'>
           利用規約
