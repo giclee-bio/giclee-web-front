@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import Link from 'next/link'
 
 export type Props = {
   children: React.ReactNode
@@ -29,9 +30,9 @@ const Button: React.FC<Props> = ({ children, className, href, isLink, onClick, t
   }
 
   return isLink ? (
-    <a className={`inline-block ${classes}`} href={href}>
+    <Link className={`inline-block ${classes}`} href={href}>
       {children}
-    </a>
+    </Link>
   ) : (
     <button className={classes} onClick={onClick}>
       {children}
