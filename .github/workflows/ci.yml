@@ -1,0 +1,16 @@
+name: CI
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: pnpm setup
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.3.1
+      - name: install packages
+        run: pnpm install
+      - name: run test
+        run: pnpm test:ci
