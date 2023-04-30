@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshot button 1`] = `
+<DocumentFragment>
+  <button
+    class="h-10 rounded text-center font-bold leading-10 w-64 bg-stone-800"
+  >
+    children
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button snapshot link 1`] = `
+<DocumentFragment>
+  <a
+    class="inline-block h-10 rounded text-center font-bold leading-10 w-64 bg-stone-800"
+    href="/hoge"
+  >
+    children
+  </a>
+</DocumentFragment>
+`;
