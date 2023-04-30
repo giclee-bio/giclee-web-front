@@ -2,6 +2,7 @@ import classNames from 'classnames'
 
 export type Props = {
   children: React.ReactNode
+  className?: string
   href?: string
   isLink?: boolean
   onClick?: () => void
@@ -9,8 +10,8 @@ export type Props = {
   width?: 'half' | 'default'
 } & ({ href: string; isLink: true } | { isLink?: false })
 
-const Button: React.FC<Props> = ({ children, href, isLink, onClick, type, width }) => {
-  let classes = classNames('h-10', 'rounded', 'text-center', 'font-bold', 'leading-10')
+const Button: React.FC<Props> = ({ children, className, href, isLink, onClick, type, width }) => {
+  let classes = classNames(className, 'h-10', 'rounded', 'text-center', 'font-bold', 'leading-10')
 
   classes = width === 'half' ? classNames(classes, 'w-32') : classNames(classes, 'w-64')
   switch (type) {
