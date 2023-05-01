@@ -8,13 +8,18 @@ import Button from '@/components/atoms/Button'
 import type { Props as ButtonProps } from '@/components/atoms/Button'
 
 export type FormField = {
+  cols?: number
   label: string
   name: string
   require?: boolean
+  rows?: number
   tag: 'input' | 'textarea'
-  type: HTMLInputTypeAttribute
+  type?: HTMLInputTypeAttribute
   validations?: FormMessage[]
-} & ({ require: undefined; tag: 'textarea' } | { tag: 'input' })
+} & (
+  | { cols: number; rows: number; tag: 'textarea'; type?: undefined }
+  | { cols?: undefined; rows?: undefined; tag: 'input'; type: HTMLInputTypeAttribute }
+)
 
 export type FormMessage = {
   match: RadixForm.CustomMatcher
@@ -36,9 +41,11 @@ const FormMessage: React.FC<FormMessage> = ({ match, message }) => {
 }
 
 const FormItem: React.FC<FormField> = ({
+  cols,
   label,
   name,
   require = false,
+  rows,
   tag,
   type,
   validations,
@@ -61,7 +68,12 @@ const FormItem: React.FC<FormField> = ({
         {tag === 'input' ? (
           <input className='h-8 w-full rounded px-3 text-base' required={require} type={type} />
         ) : (
-          <textarea className='h-8 w-full rounded px-3 text-base' required={require} />
+          <textarea
+            className='w-full rounded px-3 text-base'
+            cols={cols}
+            required={require}
+            rows={rows}
+          />
         )}
       </RadixForm.Control>
     </RadixForm.Field>
