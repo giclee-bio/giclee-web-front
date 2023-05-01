@@ -44,7 +44,7 @@ const FormItem: React.FC<FormField> = ({
   validations,
 }) => {
   return (
-    <RadixForm.Field name={name}>
+    <RadixForm.Field className='mt-4 first:mt-0' name={name}>
       <div className='flex justify-between text-sm'>
         <RadixForm.Label className='font-bold'>{label}</RadixForm.Label>
         {require && (
