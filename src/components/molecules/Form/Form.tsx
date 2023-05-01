@@ -22,6 +22,7 @@ export type FormMessage = {
 }
 
 type Props = {
+  buttonCenter?: boolean
   buttonProps: ButtonProps
   formFields: FormField[]
 }
@@ -67,14 +68,14 @@ const FormItem: React.FC<FormField> = ({
   )
 }
 
-const Form: React.FC<Props> = ({ buttonProps, formFields }) => {
+const Form: React.FC<Props> = ({ buttonCenter = true, buttonProps, formFields }) => {
   return (
     <RadixForm.Root className='w-64'>
       {formFields.map((formFieid, key) => {
         return <FormItem {...formFieid} key={key} />
       })}
       <RadixForm.Submit asChild>
-        <Button {...buttonProps} className='mx-auto mt-9 block' />
+        <Button {...buttonProps} className={`mt-9 block ${buttonCenter ? 'mx-auto' : ''}`} />
       </RadixForm.Submit>
     </RadixForm.Root>
   )
