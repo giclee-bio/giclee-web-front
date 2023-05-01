@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Account snapshot 1`] = `
+<DocumentFragment>
+  <article
+    class="rounded px-8 py-12"
+  >
+    <h1
+      class="text-2xl font-bold"
+    >
+      アカウント設定
+    </h1>
+    <section
+      class="mt-12"
+    >
+      <h2
+        class="text-xl font-bold"
+      >
+        アカウント情報
+      </h2>
+      <div
+        class="mt-8 flex gap-24 px-4"
+      >
+        <div>
+          <button>
+            <img
+              alt="aa"
+              class="rounded-full"
+              data-nimg="1"
+              decoding="async"
+              height="80"
+              loading="lazy"
+              src="/_next/image?url=%2Fnacal.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fnacal.png&w=96&q=75 1x, /_next/image?url=%2Fnacal.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+            <p
+              class="mt-2 text-sm"
+            >
+              変更する
+            </p>
+          </button>
+        </div>
+        <form
+          class="w-64"
+        >
+          <div
+            class="mt-4 first:mt-0"
+          >
+            <div
+              class="flex justify-between text-sm"
+            >
+              <label
+                class="font-bold"
+                for="radix-:r0:"
+              >
+                表示名
+              </label>
+            </div>
+            <input
+              class="mt-2 bg-white h-8 w-full rounded px-3 text-base"
+              id="radix-:r0:"
+              name="displayName"
+              required=""
+              title=""
+              type="text"
+            />
+          </div>
+          <div
+            class="mt-4 first:mt-0"
+          >
+            <div
+              class="flex justify-between text-sm"
+            >
+              <label
+                class="font-bold"
+                for="radix-:r1:"
+              >
+                自己紹介
+              </label>
+            </div>
+            <textarea
+              class="mt-2 bg-white w-full rounded px-3 text-base"
+              cols="30"
+              id="radix-:r1:"
+              name="username"
+              required=""
+              rows="5"
+              title=""
+            />
+          </div>
+          <button
+            class="mt-9 block  h-10 rounded text-center font-bold leading-10 w-32 bg-primary text-base"
+          >
+            更新する
+          </button>
+        </form>
+      </div>
+    </section>
+    <section
+      class="mt-12"
+    >
+      <h2
+        class="mb-8 text-xl font-bold"
+      >
+        アカウント削除
+      </h2>
+      <button
+        class="h-10 rounded text-center font-bold leading-10 w-32 bg-ruby-400 text-base"
+      >
+        削除する
+      </button>
+    </section>
+  </article>
+</DocumentFragment>
+`;

@@ -1,10 +1,10 @@
 import Contents from '@/components/organisms/Contents'
-import Top from '@/components/pages/Top'
+import Account from '@/components/pages/Account'
 
 export default function Home() {
   return (
-    <Contents center={true} width='wide'>
-      <Top />
+    <Contents width='narrow'>
+      <Account />
     </Contents>
   )
 }

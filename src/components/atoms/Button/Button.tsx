@@ -7,7 +7,7 @@ export type Props = {
   href?: string
   isLink?: boolean
   onClick?: () => void
-  type?: 'light' | 'primary' | 'discord' | 'default'
+  type?: 'light' | 'primary' | 'discord' | 'default' | 'danger'
   width?: 'half' | 'default'
 } & ({ href: string; isLink: true } | { isLink?: false })
 
@@ -24,6 +24,9 @@ const Button: React.FC<Props> = ({ children, className, href, isLink, onClick, t
       break
     case 'discord':
       classes = classNames(classes, 'bg-discord')
+      break
+    case 'danger':
+      classes = classNames(classes, 'bg-ruby-400', 'text-base')
       break
     default:
       classes = classNames(classes, 'bg-stone-800')

@@ -16,7 +16,9 @@ exports[`RegisterForm snapshot 1`] = `
     <form
       class="w-64"
     >
-      <div>
+      <div
+        class="mt-4 first:mt-0"
+      >
         <div
           class="flex justify-between text-sm"
         >
@@ -37,7 +39,7 @@ exports[`RegisterForm snapshot 1`] = `
         />
       </div>
       <button
-        class="mx-auto mt-9 block h-10 rounded text-center font-bold leading-10 w-64 bg-primary text-base"
+        class="mt-9 block mx-auto h-10 rounded text-center font-bold leading-10 w-64 bg-primary text-base"
       >
         登録する
       </button>

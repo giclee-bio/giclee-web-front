@@ -8,13 +8,18 @@ import Button from '@/components/atoms/Button'
 import type { Props as ButtonProps } from '@/components/atoms/Button'
 
 export type FormField = {
+  cols?: number
   label: string
   name: string
   require?: boolean
+  rows?: number
   tag: 'input' | 'textarea'
-  type: HTMLInputTypeAttribute
+  type?: HTMLInputTypeAttribute
   validations?: FormMessage[]
-} & ({ require: undefined; tag: 'textarea' } | { tag: 'input' })
+} & (
+  | { cols: number; rows: number; tag: 'textarea'; type?: undefined }
+  | { cols?: undefined; rows?: undefined; tag: 'input'; type: HTMLInputTypeAttribute }
+)
 
 export type FormMessage = {
   match: RadixForm.CustomMatcher
@@ -22,6 +27,7 @@ export type FormMessage = {
 }
 
 type Props = {
+  buttonCenter?: boolean
   buttonProps: ButtonProps
   formFields: FormField[]
 }
@@ -35,15 +41,17 @@ const FormMessage: React.FC<FormMessage> = ({ match, message }) => {
 }
 
 const FormItem: React.FC<FormField> = ({
+  cols,
   label,
   name,
   require = false,
+  rows,
   tag,
   type,
   validations,
 }) => {
   return (
-    <RadixForm.Field name={name}>
+    <RadixForm.Field className='mt-4 first:mt-0' name={name}>
       <div className='flex justify-between text-sm'>
         <RadixForm.Label className='font-bold'>{label}</RadixForm.Label>
         {require && (
@@ -60,21 +68,26 @@ const FormItem: React.FC<FormField> = ({
         {tag === 'input' ? (
           <input className='h-8 w-full rounded px-3 text-base' required={require} type={type} />
         ) : (
-          <textarea className='h-8 w-full rounded px-3 text-base' required={require} />
+          <textarea
+            className='w-full rounded px-3 text-base'
+            cols={cols}
+            required={require}
+            rows={rows}
+          />
         )}
       </RadixForm.Control>
     </RadixForm.Field>
   )
 }
 
-const Form: React.FC<Props> = ({ buttonProps, formFields }) => {
+const Form: React.FC<Props> = ({ buttonCenter = true, buttonProps, formFields }) => {
   return (
     <RadixForm.Root className='w-64'>
       {formFields.map((formFieid, key) => {
         return <FormItem {...formFieid} key={key} />
       })}
       <RadixForm.Submit asChild>
-        <Button {...buttonProps} className='mx-auto mt-9 block' />
+        <Button {...buttonProps} className={`mt-9 block ${buttonCenter ? 'mx-auto' : ''}`} />
       </RadixForm.Submit>
     </RadixForm.Root>
   )

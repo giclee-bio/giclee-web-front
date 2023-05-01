@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountAvatar snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <button>
+      <img
+        alt="aa"
+        class="rounded-full"
+        data-nimg="1"
+        decoding="async"
+        height="80"
+        loading="lazy"
+        src="/_next/image?url=%2Fnacal.png&w=256&q=75"
+        srcset="/_next/image?url=%2Fnacal.png&w=96&q=75 1x, /_next/image?url=%2Fnacal.png&w=256&q=75 2x"
+        style="color: transparent;"
+        width="80"
+      />
+      <p
+        class="mt-2 text-sm"
+      >
+        変更する
+      </p>
+    </button>
+  </div>
+</DocumentFragment>
+`;
