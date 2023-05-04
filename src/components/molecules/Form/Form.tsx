@@ -66,10 +66,10 @@ const FormItem: React.FC<FormField> = ({
       </div>
       <RadixForm.Control asChild className='mt-2 bg-stone-50'>
         {tag === 'input' ? (
-          <input className='h-8 w-full rounded px-3 text-base' required={require} type={type} />
+          <input className='h-8 w-full rounded px-3 text-black' required={require} type={type} />
         ) : (
           <textarea
-            className='w-full rounded px-3 text-base'
+            className='w-full rounded px-3 text-black'
             cols={cols}
             required={require}
             rows={rows}
