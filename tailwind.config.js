@@ -12,7 +12,8 @@ module.exports = {
       current: 'currentColor',
       primary: '#4AB580', //giclee-400
       base: '#303633', //stone-900
-      white: '#D7D9D8', //stone-100
+      black: '#000000',
+      white: '#FFFFFF',
       discord: '#5865F2',
 
       giclee: {
