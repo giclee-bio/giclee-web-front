@@ -20,6 +20,7 @@ const CardContent: React.FC<Props> = ({ account, items }) => {
           width='72'
         />
         <h2 className='mt-2 text-lg font-bold'>{account.displayName}</h2>
+        <p className='mt-2 text-sm'>{account.description}</p>
       </div>
       {items.map((item, key) => (
         <li className='mt-8 flex list-none items-center justify-center' key={key}>
