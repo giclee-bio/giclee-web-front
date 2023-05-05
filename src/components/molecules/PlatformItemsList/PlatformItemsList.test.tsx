@@ -13,7 +13,10 @@ const items: PlatformItems[] = new Array(8).fill(item)
 
 describe('PlatformItemsList', () => {
   it('snapshot', async () => {
-    const { asFragment } = render(<PlatformItemsList items={items} />, {})
+    const { asFragment } = render(
+      <PlatformItemsList handleSelectItem={() => jest.mock} items={items} />,
+      {}
+    )
     expect(asFragment()).toMatchSnapshot()
   })
 })

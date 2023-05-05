@@ -7,17 +7,18 @@ import PlatformItem from '@/components/atoms/PlatformItem'
 import type { PlatformItems } from '@/components/atoms/PlatformItem'
 
 type Props = {
+  handleSelectItem: (item: PlatformItems) => void
   items: PlatformItems[]
 }
 
-const PlatformItemsList: React.FC<Props> = ({ items }) => {
+const PlatformItemsList: React.FC<Props> = ({ handleSelectItem, items }) => {
   return (
     <ScrollArea.Root className='h-32 max-w-md overflow-hidden'>
       <ScrollArea.Viewport className='h-full w-full rounded'>
         <div className='flex'>
           {items.map((item, key) => (
             <li className='ml-6 list-none first:ml-8' key={key}>
-              <PlatformItem {...item} />
+              <PlatformItem {...item} handleSelectItem={handleSelectItem} />
             </li>
           ))}
         </div>
