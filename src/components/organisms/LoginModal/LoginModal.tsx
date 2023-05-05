@@ -34,7 +34,11 @@ const LoginModal: React.FC<Props> = ({ hero }) => {
       dialogProps={dialogProps}
     >
       <Button
-        onClick={() => signIn('discord', { callbackUrl: 'http://localhost:3000/register' })}
+        onClick={() =>
+          signIn('discord', {
+            callbackUrl: `${process.env.NEXT_PUBLIC_HOST}/register`,
+          })
+        }
         type='discord'
       >
         Discordでログイン
