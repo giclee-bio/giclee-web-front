@@ -45,6 +45,7 @@ const EditableCardItem: React.FC<Props> = ({
             <button
               className='text-sm text-ruby-400'
               onClick={() => handleClickDeleteItem(caption)}
+              type='button'
             >
               Delete
             </button>
