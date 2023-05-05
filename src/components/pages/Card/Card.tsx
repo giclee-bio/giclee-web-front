@@ -69,17 +69,25 @@ const Card = () => {
 
   const handleChangeText = (e: React.ChangeEvent<HTMLInputElement>, caption: string) => {
     setBioItems((prevState) =>
-      prevState.map((obj) =>
-        obj.caption === caption ? { ...obj, platformAccountName: e.target.value } : obj
+      prevState.map((item) =>
+        item.caption === caption ? { ...item, platformAccountName: e.target.value } : item
       )
     )
+  }
+
+  const handleClickDeleteItem = (caption: string) => {
+    setBioItems((prevState) => prevState.filter((item) => item.caption !== caption))
   }
 
   return (
     <div className='flex justify-between'>
       <div>
         <SearchPlatformItemsModule handleSelectItem={handleSelectItem} items={items} />
-        <EditableCardItemsList handleChangeText={handleChangeText} items={bioItems} />
+        <EditableCardItemsList
+          handleChangeText={handleChangeText}
+          handleClickDeleteItem={handleClickDeleteItem}
+          items={bioItems}
+        />
       </div>
       <CardContent account={mockAccount} items={bioItems} />
     </div>
