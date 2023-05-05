@@ -1,6 +1,6 @@
 'use client'
-
 import * as RadixForm from '@radix-ui/react-form'
+import { useSession } from 'next-auth/react'
 import { HTMLInputTypeAttribute } from 'react'
 
 import Button from '@/components/atoms/Button'
@@ -50,6 +50,7 @@ const FormItem: React.FC<FormField> = ({
   type,
   validations,
 }) => {
+  const { data: session } = useSession()
   return (
     <RadixForm.Field className='mt-4 first:mt-0' name={name}>
       <div className='flex justify-between text-sm'>
@@ -66,7 +67,12 @@ const FormItem: React.FC<FormField> = ({
       </div>
       <RadixForm.Control asChild className='mt-2 bg-white'>
         {tag === 'input' ? (
-          <input className='h-8 w-full rounded px-3 text-base' required={require} type={type} />
+          <input
+            className='h-8 w-full rounded px-3 text-base'
+            defaultValue={(name === 'username' && session && session.user?.name) || ''}
+            required={require}
+            type={type}
+          />
         ) : (
           <textarea
             className='w-full rounded px-3 text-base'
