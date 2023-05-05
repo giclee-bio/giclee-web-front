@@ -88,7 +88,14 @@ const FormItem: React.FC<FormField> = ({
 
 const Form: React.FC<Props> = ({ buttonCenter = true, buttonProps, formFields }) => {
   return (
-    <RadixForm.Root className='w-64'>
+    <RadixForm.Root
+      className='w-64'
+      onSubmit={(event) => {
+        event.preventDefault()
+        const data = Object.fromEntries(new FormData(event.currentTarget))
+        console.log(data)
+      }}
+    >
       {formFields.map((formFieid, key) => {
         return <FormItem {...formFieid} key={key} />
       })}
