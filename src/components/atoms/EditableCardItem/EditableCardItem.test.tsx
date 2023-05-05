@@ -1,3 +1,4 @@
+import * as RadixForm from '@radix-ui/react-form'
 import { render } from '@testing-library/react'
 
 import EditableCardItem from './EditableCardItem'
@@ -14,11 +15,13 @@ const item: PlatformItems = {
 describe('EditableCardItem', () => {
   it('snapshot', async () => {
     const { asFragment } = render(
-      <EditableCardItem
-        {...item}
-        handleChangeText={() => jest.mock}
-        handleClickDeleteItem={() => jest.mock}
-      />,
+      <RadixForm.Root>
+        <EditableCardItem
+          {...item}
+          handleChangeText={() => jest.mock}
+          handleClickDeleteItem={() => jest.mock}
+        />
+      </RadixForm.Root>,
       {}
     )
     expect(asFragment()).toMatchSnapshot()
