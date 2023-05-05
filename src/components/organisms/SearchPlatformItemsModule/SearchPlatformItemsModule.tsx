@@ -5,14 +5,12 @@ import PlatformItemsList from '@/components/molecules/PlatformItemsList'
 
 import type { PlatformItems } from '@/components/atoms/PlatformItem'
 
-const SearchPlatformItemsModule = () => {
-  const item = {
-    alt: 'nacal',
-    caption: 'nacal',
-    src: '/nacal.png',
-  }
-  const items: PlatformItems[] = new Array(8).fill(item)
+type Props = {
+  handleSelectItem: (item: PlatformItems) => void
+  items: PlatformItems[]
+}
 
+const SearchPlatformItemsModule: React.FC<Props> = ({ handleSelectItem, items }) => {
   return (
     <section className='max-w-md rounded-lg bg-stone-800'>
       <h2 className='pl-8 pt-6 font-bold'>新しいIDを追加</h2>
@@ -23,7 +21,7 @@ const SearchPlatformItemsModule = () => {
         </button>
       </section>
       <section className=''>
-        <PlatformItemsList items={items} />
+        <PlatformItemsList handleSelectItem={handleSelectItem} items={items} />
       </section>
     </section>
   )
