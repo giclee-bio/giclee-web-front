@@ -1,4 +1,6 @@
 'use client'
+import { signIn } from 'next-auth/react'
+
 import Button from '@/components/atoms/Button'
 import Modal from '@/components/molecules/Modal'
 
@@ -31,8 +33,14 @@ const LoginModal: React.FC<Props> = ({ hero }) => {
       buttonProps={hero ? TriggerButtonProps : TriggerDefaultButtonProps}
       dialogProps={dialogProps}
     >
-      {/* ToDo NextAuthに置き換え */}
-      <Button href='/register' isLink={true} type='discord'>
+      <Button
+        onClick={() =>
+          signIn('discord', {
+            callbackUrl: `${process.env.NEXT_PUBLIC_HOST}/register`,
+          })
+        }
+        type='discord'
+      >
         Discordでログイン
       </Button>
       <p className='mt-4 w-64 text-xs'>
