@@ -3,7 +3,7 @@
 exports[`LoginModal snapshot 1`] = `
 <DocumentFragment>
   <button
-    class="h-10 rounded text-center font-bold leading-10 w-32 bg-white text-base"
+    class="h-10 rounded text-center font-bold leading-10 w-32 bg-stone-50 text-black"
   >
     ログイン
   </button>
