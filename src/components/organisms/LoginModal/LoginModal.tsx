@@ -37,7 +37,6 @@ const LoginModal: React.FC<Props> = ({ hero }) => {
       <Button onClick={signIn} type='discord'>
         Discordでログイン
       </Button>
-
       <p className='mt-4 w-64 text-xs'>
         <a className='underline' href='/'>
           利用規約
