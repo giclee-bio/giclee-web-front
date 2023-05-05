@@ -17,16 +17,16 @@ const Button: React.FC<Props> = ({ children, className, href, isLink, onClick, t
   classes = width === 'half' ? classNames(classes, 'w-32') : classNames(classes, 'w-64')
   switch (type) {
     case 'light':
-      classes = classNames(classes, 'bg-white', 'text-base')
+      classes = classNames(classes, 'bg-stone-50', 'text-black')
       break
     case 'primary':
-      classes = classNames(classes, 'bg-primary', 'text-base')
+      classes = classNames(classes, 'bg-primary', 'text-black')
       break
     case 'discord':
       classes = classNames(classes, 'bg-discord')
       break
     case 'danger':
-      classes = classNames(classes, 'bg-ruby-400', 'text-base')
+      classes = classNames(classes, 'bg-ruby-400', 'text-black')
       break
     default:
       classes = classNames(classes, 'bg-stone-800')

@@ -59,7 +59,7 @@ exports[`Account snapshot 1`] = `
               </label>
             </div>
             <input
-              class="mt-2 bg-white h-8 w-full rounded px-3 text-base"
+              class="mt-2 bg-stone-50 h-8 w-full rounded px-3 text-black"
               id="radix-:r0:"
               name="displayName"
               required=""
@@ -81,7 +81,7 @@ exports[`Account snapshot 1`] = `
               </label>
             </div>
             <textarea
-              class="mt-2 bg-white w-full rounded px-3 text-base"
+              class="mt-2 bg-stone-50 w-full rounded px-3 text-black"
               cols="30"
               id="radix-:r1:"
               name="username"
@@ -91,7 +91,7 @@ exports[`Account snapshot 1`] = `
             />
           </div>
           <button
-            class="mt-9 block  h-10 rounded text-center font-bold leading-10 w-32 bg-primary text-base"
+            class="mt-9 block  h-10 rounded text-center font-bold leading-10 w-32 bg-primary text-black"
           >
             更新する
           </button>
@@ -107,7 +107,7 @@ exports[`Account snapshot 1`] = `
         アカウント削除
       </h2>
       <button
-        class="h-10 rounded text-center font-bold leading-10 w-32 bg-ruby-400 text-base"
+        class="h-10 rounded text-center font-bold leading-10 w-32 bg-ruby-400 text-black"
       >
         削除する
       </button>

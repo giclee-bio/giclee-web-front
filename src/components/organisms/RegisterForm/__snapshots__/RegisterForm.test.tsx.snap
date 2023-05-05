@@ -30,7 +30,7 @@ exports[`RegisterForm snapshot 1`] = `
           </label>
         </div>
         <input
-          class="mt-2 bg-white h-8 w-full rounded px-3 text-base"
+          class="mt-2 bg-stone-50 h-8 w-full rounded px-3 text-black"
           id="radix-:r0:"
           name="username"
           required=""
@@ -39,7 +39,7 @@ exports[`RegisterForm snapshot 1`] = `
         />
       </div>
       <button
-        class="mt-9 block mx-auto h-10 rounded text-center font-bold leading-10 w-64 bg-primary text-base"
+        class="mt-9 block mx-auto h-10 rounded text-center font-bold leading-10 w-64 bg-primary text-black"
       >
         登録する
       </button>
