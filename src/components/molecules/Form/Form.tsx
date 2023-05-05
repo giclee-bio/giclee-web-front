@@ -70,7 +70,7 @@ const FormItem: React.FC<FormField> = ({
         {tag === 'input' ? (
           <input
             className='h-8 w-full rounded px-3 text-black'
-            defaultValue={defaultValue || ''}
+            defaultValue={defaultValue}
             required={require}
             type={type}
           />
@@ -78,7 +78,7 @@ const FormItem: React.FC<FormField> = ({
           <textarea
             className='w-full rounded px-3 text-black'
             cols={cols}
-            defaultValue={defaultValue || ''}
+            defaultValue={defaultValue}
             required={require}
             rows={rows}
           />
