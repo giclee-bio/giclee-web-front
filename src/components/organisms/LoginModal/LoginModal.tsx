@@ -1,4 +1,6 @@
 'use client'
+import { signIn } from 'next-auth/react'
+
 import Button from '@/components/atoms/Button'
 import Modal from '@/components/molecules/Modal'
 
@@ -32,9 +34,10 @@ const LoginModal: React.FC<Props> = ({ hero }) => {
       dialogProps={dialogProps}
     >
       {/* ToDo NextAuthに置き換え */}
-      <Button href='/register' isLink={true} type='discord'>
+      <Button onClick={signIn} type='discord'>
         Discordでログイン
       </Button>
+
       <p className='mt-4 w-64 text-xs'>
         <a className='underline' href='/'>
           利用規約
