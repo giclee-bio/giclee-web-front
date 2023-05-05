@@ -13,7 +13,10 @@ const items: PlatformItems[] = new Array(8).fill(item)
 
 describe('EditableCardItemsList', () => {
   it('snapshot', async () => {
-    const { asFragment } = render(<EditableCardItemsList items={items} />, {})
+    const { asFragment } = render(
+      <EditableCardItemsList handleChangeText={() => jest.mock} items={items} />,
+      {}
+    )
     expect(asFragment()).toMatchSnapshot()
   })
 })

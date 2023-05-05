@@ -8,15 +8,16 @@ import EditableCardItem from '@/components/atoms/EditableCardItem'
 import type { PlatformItems } from '@/components/atoms/PlatformItem'
 
 type Props = {
+  handleChangeText: (e: React.ChangeEvent<HTMLInputElement>, caption: string) => void
   items: PlatformItems[]
 }
 
-const EditableCardItemsList: React.FC<Props> = ({ items }) => {
+const EditableCardItemsList: React.FC<Props> = ({ items, handleChangeText }) => {
   return (
     <RadixForm.Root className='mt-4 max-w-md'>
       <ol className='min-h-[320px]'>
         {items.map((item, key) => {
-          return <EditableCardItem {...item} key={key} />
+          return <EditableCardItem {...item} handleChangeText={handleChangeText} key={key} />
         })}
       </ol>
       <RadixForm.Submit asChild>
