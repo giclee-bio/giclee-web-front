@@ -3,7 +3,7 @@ import { CaretRightIcon } from '@radix-ui/react-icons'
 import SearchBar from '@/components/atoms/SearchBar'
 import PlatformItemsList from '@/components/molecules/PlatformItemsList'
 
-import type { PlatformItemProps } from '@/components/atoms/PlatformItem'
+import type { PlatformItems } from '@/components/atoms/PlatformItem'
 
 const SearchPlatformItemsModule = () => {
   const item = {
@@ -11,7 +11,7 @@ const SearchPlatformItemsModule = () => {
     caption: 'nacal',
     src: '/nacal.png',
   }
-  const items: PlatformItemProps[] = new Array(8).fill(item)
+  const items: PlatformItems[] = new Array(8).fill(item)
 
   return (
     <section className='max-w-md rounded-lg bg-stone-800'>

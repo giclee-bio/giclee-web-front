@@ -4,10 +4,10 @@ import * as ScrollArea from '@radix-ui/react-scroll-area'
 
 import PlatformItem from '@/components/atoms/PlatformItem'
 
-import type { PlatformItemProps } from '@/components/atoms/PlatformItem'
+import type { PlatformItems } from '@/components/atoms/PlatformItem'
 
 type Props = {
-  items: PlatformItemProps[]
+  items: PlatformItems[]
 }
 
 const PlatformItemsList: React.FC<Props> = ({ items }) => {
