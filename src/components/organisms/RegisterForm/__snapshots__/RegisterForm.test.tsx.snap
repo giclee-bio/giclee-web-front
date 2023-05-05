@@ -36,6 +36,7 @@ exports[`RegisterForm snapshot 1`] = `
           required=""
           title=""
           type="text"
+          value=""
         />
       </div>
       <button
