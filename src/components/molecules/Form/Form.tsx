@@ -9,7 +9,7 @@ import type { Props as ButtonProps } from '@/components/atoms/Button'
 
 export type FormField = {
   cols?: number
-  defaultValue?: string | null
+  defaultValue?: string
   label: string
   name: string
   require?: boolean
