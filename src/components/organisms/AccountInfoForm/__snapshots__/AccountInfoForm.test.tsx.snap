@@ -25,6 +25,7 @@ exports[`AccountInfoForm snapshot 1`] = `
         required=""
         title=""
         type="text"
+        value=""
       />
     </div>
     <div
