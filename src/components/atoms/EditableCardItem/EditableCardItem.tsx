@@ -6,6 +6,7 @@ import type { PlatformItems } from '@/components/atoms/PlatformItem'
 
 interface Props extends PlatformItems {
   handleChangeText: (e: React.ChangeEvent<HTMLInputElement>, caption: string) => void
+  handleClickDeleteItem: (caption: string) => void
 }
 
 const EditableCardItem: React.FC<Props> = ({
@@ -14,6 +15,7 @@ const EditableCardItem: React.FC<Props> = ({
   platformAccountName,
   src,
   handleChangeText,
+  handleClickDeleteItem,
 }) => {
   return (
     <>
@@ -42,9 +44,7 @@ const EditableCardItem: React.FC<Props> = ({
           <div className='mt-2 flex justify-end'>
             <button
               className='text-sm text-ruby-400'
-              onClick={() => {
-                ;('')
-              }}
+              onClick={() => handleClickDeleteItem(caption)}
             >
               Delete
             </button>

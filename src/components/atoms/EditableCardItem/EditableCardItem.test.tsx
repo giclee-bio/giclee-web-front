@@ -14,7 +14,11 @@ const item: PlatformItems = {
 describe('EditableCardItem', () => {
   it('snapshot', async () => {
     const { asFragment } = render(
-      <EditableCardItem {...item} handleChangeText={() => jest.mock} />,
+      <EditableCardItem
+        {...item}
+        handleChangeText={() => jest.mock}
+        handleClickDeleteItem={() => jest.mock}
+      />,
       {}
     )
     expect(asFragment()).toMatchSnapshot()
