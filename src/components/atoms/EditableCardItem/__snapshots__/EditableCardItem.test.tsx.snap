@@ -53,6 +53,7 @@ exports[`EditableCardItem snapshot 1`] = `
         >
           <button
             class="text-sm text-ruby-400"
+            type="button"
           >
             Delete
           </button>
