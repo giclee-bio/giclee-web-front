@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContent snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="h-[667px] w-[375px] rounded-lg bg-stone-800"
+  >
+    <div
+      class="mt-16 flex flex-col items-center"
+    >
+      <img
+        alt="nacal"
+        class="rounded-full"
+        data-nimg="1"
+        decoding="async"
+        height="72"
+        loading="lazy"
+        src="/_next/image?url=%2Fnacal.png&w=256&q=75"
+        srcset="/_next/image?url=%2Fnacal.png&w=96&q=75 1x, /_next/image?url=%2Fnacal.png&w=256&q=75 2x"
+        style="color: transparent;"
+        width="72"
+      />
+      <h2
+        class="mt-2 text-lg font-bold"
+      >
+        nacal
+      </h2>
+      <p
+        class="mt-2 text-sm"
+      >
+        よろしくお願いします！
+      </p>
+    </div>
+    <li
+      class="mt-8 flex list-none items-center justify-center"
+    >
+      <img
+        alt="nacal"
+        class="rounded"
+        data-nimg="1"
+        decoding="async"
+        height="36"
+        loading="lazy"
+        src="/_next/image?url=%2Fnacal.png&w=96&q=75"
+        srcset="/_next/image?url=%2Fnacal.png&w=48&q=75 1x, /_next/image?url=%2Fnacal.png&w=96&q=75 2x"
+        style="color: transparent;"
+        width="36"
+      />
+      <p
+        class="ml-4"
+      >
+        aaaa
+      </p>
+    </li>
+    <li
+      class="mt-8 flex list-none items-center justify-center"
+    >
+      <img
+        alt="nacal2"
+        class="rounded"
+        data-nimg="1"
+        decoding="async"
+        height="36"
+        loading="lazy"
+        src="/_next/image?url=%2Fnacal.png&w=96&q=75"
+        srcset="/_next/image?url=%2Fnacal.png&w=48&q=75 1x, /_next/image?url=%2Fnacal.png&w=96&q=75 2x"
+        style="color: transparent;"
+        width="36"
+      />
+      <p
+        class="ml-4"
+      >
+        bbbb
+      </p>
+    </li>
+    <li
+      class="mt-8 flex list-none items-center justify-center"
+    >
+      <img
+        alt="nacal3"
+        class="rounded"
+        data-nimg="1"
+        decoding="async"
+        height="36"
+        loading="lazy"
+        src="/_next/image?url=%2Fnacal.png&w=96&q=75"
+        srcset="/_next/image?url=%2Fnacal.png&w=48&q=75 1x, /_next/image?url=%2Fnacal.png&w=96&q=75 2x"
+        style="color: transparent;"
+        width="36"
+      />
+      <p
+        class="ml-4"
+      >
+        cccc
+      </p>
+    </li>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlatformItem snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="w-20"
+  >
+    <div
+      class="flex h-20 w-20 items-center justify-center rounded-xl bg-stone-100"
+    >
+      <img
+        alt="nacal"
+        class="rounded"
+        data-nimg="1"
+        decoding="async"
+        height="48"
+        loading="lazy"
+        src="/_next/image?url=%2Fnacal.png&w=96&q=75"
+        srcset="/_next/image?url=%2Fnacal.png&w=48&q=75 1x, /_next/image?url=%2Fnacal.png&w=96&q=75 2x"
+        style="color: transparent;"
+        width="48"
+      />
+    </div>
+    <p
+      class="mt-1 text-center text-sm"
+    >
+      nacal
+    </p>
+  </button>
+</DocumentFragment>
+`;
