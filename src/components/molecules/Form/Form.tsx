@@ -8,6 +8,7 @@ import type { Props as ButtonProps } from '@/components/atoms/Button'
 
 export type FormField = {
   cols?: number
+  defaultValue?: string | null
   label: string
   name: string
   require?: boolean
@@ -41,6 +42,7 @@ const FormMessage: React.FC<FormMessage> = ({ match, message }) => {
 
 const FormItem: React.FC<FormField> = ({
   cols,
+  defaultValue,
   label,
   name,
   require = false,
@@ -65,11 +67,17 @@ const FormItem: React.FC<FormField> = ({
       </div>
       <RadixForm.Control asChild className='mt-2 bg-stone-50'>
         {tag === 'input' ? (
-          <input className='h-8 w-full rounded px-3 text-black' required={require} type={type} />
+          <input
+            className='h-8 w-full rounded px-3 text-black'
+            defaultValue={defaultValue || ''}
+            required={require}
+            type={type}
+          />
         ) : (
           <textarea
             className='w-full rounded px-3 text-black'
             cols={cols}
+            defaultValue={defaultValue || ''}
             required={require}
             rows={rows}
           />

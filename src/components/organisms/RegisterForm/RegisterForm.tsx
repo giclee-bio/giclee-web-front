@@ -1,3 +1,6 @@
+'use client'
+import { useSession } from 'next-auth/react'
+
 import Form from '@/components/molecules/Form'
 
 import type { Props as ButtonProps } from '@/components/atoms/Button'
@@ -19,6 +22,8 @@ const formFields: FormField[] = [
 ]
 
 const RegisterForm = () => {
+  const { data: session } = useSession()
+  formFields[0].defaultValue = (session && session.user && session.user.name) || ''
   return (
     <section className='flex h-96 w-80 flex-col items-center justify-between rounded bg-stone-800 p-8'>
       <h1 className='text-2xl font-bold'>ユーザー登録</h1>
